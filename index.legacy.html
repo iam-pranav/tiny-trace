@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#FFF8E7">
+  <title>ABC Trace - Learn Letters!</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Menu toggle (always visible; hides/shows nav + letter list) -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <button class="nav-btn" id="prevBtn" aria-label="Previous letter">◀</button>
+    <div class="letter-badge" id="letterBadge">A</div>
+    <button class="nav-btn" id="nextBtn" aria-label="Next letter">▶</button>
+  </nav>
+
+  <!-- Stroke progress dots -->
+  <div class="progress-dots" id="progressDots"></div>
+
+  <!-- Canvas -->
+  <div class="canvas-container">
+    <canvas id="traceCanvas"></canvas>
+    <div class="stroke-hint" id="strokeHint">Trace the letter!</div>
+
+    <!-- Celebration overlay (sits over the canvas area) -->
+    <div class="celebration-overlay" id="celebrationOverlay">
+      <div class="celebration-emoji" id="celebEmoji"></div>
+      <div class="celebration-text" id="celebText"></div>
+    </div>
+  </div>
+
+  <!-- Word display -->
+  <div class="word-display">
+    <span id="wordText"></span>
+  </div>
+
+  <!-- Bottom controls -->
+  <div class="bottom-bar">
+    <button class="reset-btn" id="resetBtn">↻ Try Again</button>
+    <div class="letter-picker" id="letterPicker"></div>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Scripts -->
+  <script src="js/letters.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/tracing.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
